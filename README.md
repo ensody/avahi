@@ -10,7 +10,9 @@ There's a [default avahi-daemon.conf](https://github.com/ensody/avahi/blob/main/
 
 ## Volumes
 
-You can add your own `/etc/avahi/avahi-daemon.conf` or the whole `/etc/avahi` folder or just add a single service to `/etc/avahi/services`. It's your choice.
+Usually you can just add one or more service definitions to `/etc/avahi/services`.
+
+For more customization you can add your own `/etc/avahi/avahi-daemon.conf` or override the whole `/etc/avahi` folder.
 
 ## Example
 
@@ -36,5 +38,5 @@ cat > "$AVAHI_ROOT/smb.service" <<EOF
 </service-group>
 EOF
 
-docker run --restart always -d --name samba-avahi --net=host -v "$AVAHI_ROOT/services:/etc/avahi/services" ghcr.io/ensody/avahi:latest
+docker run --restart always -d --name samba-avahi --net=host -v "$AVAHI_ROOT/services/:/etc/avahi/services/" ghcr.io/ensody/avahi:latest
 ```
