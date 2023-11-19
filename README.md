@@ -2,7 +2,7 @@
 
 This is a simple Avahi Docker image.
 
-The CI automatically checks for updates (e.g. security fixes) several times daily and publishes a new image only when necessary. So, this image could be used with podman-auto-update or Watchtower.
+The CI automatically checks for updates (e.g. security fixes) several times per day and publishes a new image only when necessary. So, this image could be used with podman-auto-update or Watchtower.
 
 ## Defaults
 
